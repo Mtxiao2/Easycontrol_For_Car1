@@ -26,7 +26,7 @@ public final class Setting {
   }
 
   public int getDefaultMaxSize() {
-    return sharedPreferences.getInt("defaultMaxSize", 1600);
+    return sharedPreferences.getInt("defaultMaxSize", 1920);
   }
 
   public void setDefaultMaxSize(int value) {
@@ -35,7 +35,7 @@ public final class Setting {
   }
 
   public int getDefaultMaxFps() {
-    return sharedPreferences.getInt("defaultMaxFps", 60);
+    return sharedPreferences.getInt("defaultMaxFps", 30);
   }
 
   public void setDefaultMaxFps(int value) {
@@ -97,24 +97,6 @@ public final class Setting {
     editor.apply();
   }
 
-  public boolean getDefaultFull() {
-    return sharedPreferences.getBoolean("defaultFull", false);
-  }
-
-  public void setDefaultFull(boolean value) {
-    editor.putBoolean("defaultFull", value);
-    editor.apply();
-  }
-
-  public boolean getAutoBackOnStartDefault() {
-    return sharedPreferences.getBoolean("autoBackOnStartDefault", false);
-  }
-
-  public void setAutoBackOnStartDefault(boolean value) {
-    editor.putBoolean("autoBackOnStartDefault", value);
-    editor.apply();
-  }
-
   public boolean getTurnOnScreenIfStart() {
     return sharedPreferences.getBoolean("TurnOnScreenIfStart", true);
   }
@@ -125,7 +107,7 @@ public final class Setting {
   }
 
   public boolean getTurnOffScreenIfStart() {
-    return sharedPreferences.getBoolean("TurnOffScreenIfStart", false);
+    return sharedPreferences.getBoolean("TurnOffScreenIfStart", true);
   }
 
   public void setTurnOffScreenIfStart(boolean value) {
@@ -143,7 +125,7 @@ public final class Setting {
   }
 
   public boolean getTurnOnScreenIfStop() {
-    return sharedPreferences.getBoolean("TurnOnScreenIfStop", true);
+    return sharedPreferences.getBoolean("TurnOnScreenIfStop", false);
   }
 
   public void setTurnOnScreenIfStop(boolean value) {
@@ -169,35 +151,8 @@ public final class Setting {
     editor.apply();
   }
 
-  public boolean getDefaultMiniOnOutside() {
-    return sharedPreferences.getBoolean("defaultMiniOnOutside", false);
-  }
-
-  public void setDefaultMiniOnOutside(boolean value) {
-    editor.putBoolean("defaultMiniOnOutside", value);
-    editor.apply();
-  }
-
-  public boolean getMiniRecoverOnTimeout() {
-    return sharedPreferences.getBoolean("miniRecoverOnTimeout", false);
-  }
-
-  public void setMiniRecoverOnTimeout(boolean value) {
-    editor.putBoolean("miniRecoverOnTimeout", value);
-    editor.apply();
-  }
-
-  public boolean getFullToMiniOnExit() {
-    return sharedPreferences.getBoolean("fullToMiniOnExit", true);
-  }
-
-  public void setFullToMiniOnExit(boolean value) {
-    editor.putBoolean("fullToMiniOnExit", value);
-    editor.apply();
-  }
-
   public boolean getFillFull() {
-    return sharedPreferences.getBoolean("fillFull", false);
+    return sharedPreferences.getBoolean("fillFull", true);
   }
 
   public void setFillFull(boolean value) {
@@ -233,7 +188,7 @@ public final class Setting {
   }
 
   public boolean getShowReconnect() {
-    return sharedPreferences.getBoolean("showReconnect", true);
+    return sharedPreferences.getBoolean("showReconnect", false);
   }
 
   public void setShowReconnect(boolean value) {
@@ -242,7 +197,7 @@ public final class Setting {
   }
 
   public boolean getShowConnectUSB() {
-    return sharedPreferences.getBoolean("showConnectUSB", true);
+    return sharedPreferences.getBoolean("showConnectUSB", false);
   }
 
   public void setShowConnectUSB(boolean value) {
@@ -259,15 +214,6 @@ public final class Setting {
     editor.apply();
   }
 
-  public boolean getAlwaysFullMode() {
-    return sharedPreferences.getBoolean("alwaysFullMode", false);
-  }
-
-  public void setAlwaysFullMode(boolean value) {
-    editor.putBoolean("alwaysFullMode", value);
-    editor.apply();
-  }
-
   public boolean getShowUsage() {
     return sharedPreferences.getBoolean("showUsage", false);
   }
@@ -278,7 +224,7 @@ public final class Setting {
   }
 
   public boolean getEnableUSB() {
-    return sharedPreferences.getBoolean("enableUSB", true);
+    return sharedPreferences.getBoolean("enableUSB", false);
   }
 
   public void setEnableUSB(boolean value) {
@@ -302,24 +248,6 @@ public final class Setting {
 
   public void setAudioChannel(int value) {
     editor.putInt("audioChannel", value);
-    editor.apply();
-  }
-
-  public boolean getMonitorState() {
-    return sharedPreferences.getBoolean("monitorState", false);
-  }
-
-  public void setMonitorState(boolean value) {
-    editor.putBoolean("monitorState", value);
-    editor.apply();
-  }
-
-  public int getMonitorLatency() {
-    return sharedPreferences.getInt("monitorLatency", 1500);
-  }
-
-  public void setMonitorLatency(int value) {
-    editor.putInt("monitorLatency", value);
     editor.apply();
   }
 
