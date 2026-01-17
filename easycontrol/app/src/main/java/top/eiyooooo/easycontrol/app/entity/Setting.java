@@ -17,7 +17,7 @@ public final class Setting {
   }
 
   public boolean getDefaultIsAudio() {
-    return sharedPreferences.getBoolean("defaultIsAudio", true);
+    return sharedPreferences.getBoolean("defaultIsAudio", false);
   }
 
   public void setDefaultIsAudio(boolean value) {
